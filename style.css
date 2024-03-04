@@ -1,0 +1,80 @@
+body { 
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url(background.jpg);
+    background-size: cover;
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 24px;
+    text-align: center;
+    color: #ffffff; 
+    background: #e74d3c34; 
+    margin-bottom: 20px; 
+}
+
+.clockContainer {
+    display: flex;
+}
+
+.clockContainer div {
+    margin: 5px;
+    position: relative;
+}
+
+p, h2, .AMPM {
+    margin: 5px;
+    width: 100px;
+    height: 80px;
+    background: #3498db; 
+    opacity: 0.8;
+    color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 5px; 
+}
+.AMPM {
+    width: 80px; 
+    height: 50px; 
+    font-size: 24px; 
+}
+
+.clockContainer p {
+    height: 30px;
+    font-size: 14px; 
+    background: #e74c3c; 
+}
+
+@media (max-width: 600px) {
+    p, h2, .AMPM {
+        font-size: 24px;
+        width: 80px;
+        height: 60px;
+    }
+    .clockContainer p {
+        font-size: 12px;
+    }
+} 
+@media (max-width: 300px) {
+    h1 {
+        font-size: 24px;
+    }
+    p, h2, .AMPM {
+        font-size: 20px;
+        width: 60px;
+        height: 50px;
+    }
+    .clockContainer p {
+        font-size: 12px;
+    }
+}
