@@ -4,7 +4,7 @@ var currentSeconds;
 var ampm;
 
 setInterval(() => {
-    var currentDate = new Date();
+    let currentDate = new Date();
     currentSeconds = currentDate.getSeconds();
     currentMinutes = currentDate.getMinutes();
     currentHours = currentDate.getHours();
@@ -23,3 +23,20 @@ setInterval(() => {
     document.querySelector(".AMPM").textContent = ampm; 
 }, 1000);
 
+
+setInterval(() => {
+    let date = new Date();
+
+    let currentSeconds = date.getSeconds();
+    let rotateSec = currentSeconds * 6; 
+    document.querySelector(".anSec").style.transform = "rotate(" + rotateSec + "deg)";
+
+    let currentMinutes = date.getMinutes();
+    let rotateMin = currentMinutes * 6 + (currentSeconds / 10);
+    document.querySelector(".anMin").style.transform = "rotate(" + rotateMin + "deg)";
+
+    let currentHours = date.getHours();
+    let rotateHr = (currentHours % 12) * 30 + (currentMinutes / 60) * 30; 
+    document.querySelector(".anHr").style.transform = "rotate(" + rotateHr + "deg)";
+
+}, 10);
